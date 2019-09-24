@@ -16,7 +16,7 @@ function getExtent(){
 }
 
 function init(){
-    sed "s/\$SOURCE_NAME/$SOURCE_NAME/g;"  "scripts/config.toml.template"  > "config.toml"
+    sed "s/\$SOURCE_NAME/$SOURCE_NAME/g;"  "config.toml.template"  > "config.toml"
     getExtent "$SOURCE_NAME"
 }
 
