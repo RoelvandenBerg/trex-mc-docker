@@ -3,7 +3,7 @@ viewer = true
 
 [[datasource]]
 name = "$SOURCE_NAME"
-path = export.gpkg
+path = "export.gpkg"
 
 [grid.user]
 width = 256

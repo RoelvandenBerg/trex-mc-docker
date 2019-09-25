@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 function getExtent(){
     source_name=$1
-    filename="${source_name}_export.gpkg"
-    extent_string=$(ogrinfo -so "$filename" "${source_name}_export" | grep Extent)
+    extent_string=$(ogrinfo -so export.gpkg "${source_name}_export" | grep Extent)
     regex="Extent:\s\(([0-9\.]+),\s([0-9\.]+)\)\s-\s\(([0-9\.]+),\s([0-9\.]+)\)"
     if [[ $extent_string =~ $regex ]]; then
         echo "extent_string: $extent_string"
